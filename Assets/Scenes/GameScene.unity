@@ -200,8 +200,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 665964787}
+  - component: {fileID: 665964789}
+  - component: {fileID: 665964788}
   m_Layer: 0
-  m_Name: Numbers
+  m_Name: Numbers Texts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,6 +224,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &665964788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665964786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f085eb2f7d264844b9f2989aacd9f04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCount: 9
+  numberTmps: {fileID: 665964789}
+--- !u!114 &665964789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665964786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2006ca77dab58418f695b8a8b23eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1900839870}
+  tmpPrefab: {fileID: 3920513880084933242, guid: 47b7ab03f3c224c4888223265b598d91, type: 3}
+  tmpParent: {fileID: 665964787}
 --- !u!1 &758446585
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +263,6 @@ GameObject:
   m_Component:
   - component: {fileID: 758446588}
   - component: {fileID: 758446587}
-  - component: {fileID: 758446586}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -240,21 +270,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &758446586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758446585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed2006ca77dab58418f695b8a8b23eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 1900839870}
-  tmpPrefab: {fileID: 3920513880084933242, guid: 47b7ab03f3c224c4888223265b598d91, type: 3}
-  tmpParent: {fileID: 665964787}
 --- !u!156049354 &758446587
 Grid:
   m_ObjectHideFlags: 0

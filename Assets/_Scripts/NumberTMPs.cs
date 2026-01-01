@@ -1,3 +1,8 @@
+/// <summary>
+/// 직접적인 tmp 관리 / 숫자 수정 관리
+/// 받아온 인덱스와 값으로 tmp에 텍스트 할당
+/// 다른 스크립트에서 호출하는 용
+/// </summary>
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
