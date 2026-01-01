@@ -1,35 +1,36 @@
-///<summary>
-/// 타일 담은 부모옵젝에, 숫자 설정만
-///</summary>
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SetTilesNumber : MonoBehaviour
 {
-    public int sum = 50; //분포 된 숫자 총합
-    int count;
-    Transform children;
+    public int startCount = 9;
+    public NumberTMPs numberTmps;
 
-    private void Awake()
-    {
-        count = transform.childCount;
-    }
+    private int tileCount;
+
     void Start()
     {
-        SetRandomNumTile();
+        tileCount = numberTmps.GetTileCount();
+        SetInitialNumber();
     }
 
-    void SetRandomNumTile()
+    private void SetInitialNumber()
     {
-        int rand = Random.Range(0, 10);
+        if (numberTmps == null) return;
+        if (tileCount <= 0) return;
+
+        int k = Mathf.Min(startCount, tileCount);
+
+        // 중복 방지
+        HashSet<int> chosen = new HashSet<int>();
+
+        while (chosen.Count < k)
+        {
+            int idx = Random.Range(0, tileCount);
+            if (!chosen.Add(idx)) continue; 
+
+            int value = Random.Range(1, 10);
+            numberTmps.SetTileText(idx, value); //뽑은 idx에 바로 할당
+        }
     }
-
-    void Update()
-    {
-        
-    }
-
-
-
 }
